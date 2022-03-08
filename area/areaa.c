@@ -5,7 +5,7 @@
 //calcoli e stampi:
 //1. l’area del quadrato di lato D
 
-main() {
+int main() {
     int lato, risultato, figura;
     printf("Scegli di che figura vuoi sapere l'area\n1 Quadrato\n2 Cerchio\n3 Triangolo equilatero\n");
     scanf("%d", &figura);
