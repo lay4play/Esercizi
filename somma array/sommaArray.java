@@ -19,7 +19,7 @@ public class sommaArray{
         }
         for(contatore=0;contatore<10;contatore++){
             sommaArray[contatore] = array1[contatore] + array2[contatore];
-            System.out.println(contatore + " indice " + sommaArray[contatore]);
+            System.out.println(contatore+1 + " indice " + sommaArray[contatore]);
         }
     }
 }
