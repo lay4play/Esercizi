@@ -1,12 +1,12 @@
 #include <stdio.h>
 //scrivere tanti simboli quanto il numero dato
 int main(){
-    int i, n, c, numeri[256];
+    int i, n, c;
     do{
         printf("Inserisci quanti numeri inserire\n");
         scanf("%d", &n);
-    }while(n<=0 || n>256);
-    //int numeri[n];
+    }while(n<=0);
+    int numeri[n];
     for(i=0;i<n;i++){
         do{
             printf("Inserisci il numero %d di %d\n", i+1, n);
