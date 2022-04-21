@@ -16,4 +16,5 @@ int main(){
         }
     }
     printf("Posizione %d, numero %d\n", min, array[min-1]); //utilizzare min-1 in modo da avere la posizione esatta del numero
+    return 0;
 }
