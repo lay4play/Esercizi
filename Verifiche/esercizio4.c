@@ -16,7 +16,7 @@ int main(){
 		if(i==5 || i==6 || i==7){
 			totaleEstate=totaleEstate+array[i];
 		}
-		if(i!=1 || i!=2 || i!=3){
+		if(i!=0 || i!=1 || i!=2){
 			totaleSenzaInverno=totaleSenzaInverno+array[i];
 		}
 		if(i==0){
