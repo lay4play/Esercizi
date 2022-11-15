@@ -9,12 +9,12 @@ Data una sequenza di numeri
     POSITIVI
     DIVERSI DA 0
 Tappo di inserimento lo 0
-presentare menù per scegliere se visualizzare
+presentare menu' per scegliere se visualizzare
     numero di coppie consecutive uguali
-    numero coppie in cui il secondo è divisore del primo
+    numero coppie in cui il secondo e' divisore del primo
     indicare con un messaggio quale sia presente in maggioranza
 */
-int variabili(string);
+int input(string);
 
 bool coppieConsecutive(int, int);
 
@@ -25,21 +25,25 @@ int confronto(int, int);
 void menu(int, int, int);
 
 int main() {
-    int numeroPrima, numeroDopo, ccCoppie=0, ccDivisori=0;
-    bool i=false;
+    int numeroPrima; //primo numero da analizzare
+    int numeroDopo; //secondo numero da analizzare
+    int ccCoppie=0; //contatore coppie consecutive uguali
+    int ccDivisori=0; //contatore coppie divisori
+    bool i=false; //controllo stato esecuzione ciclo
     do{
-        numeroDopo=variabili("Inserisci numero: ");
+        numeroDopo=input("Inserisci numero: ");
         if( numeroDopo != 0){
-            if(i == true){ //controllo alterazione variabile contatore
+            if(i){ //controllo alterazione variabile contatore
                 if(coppieConsecutive(numeroPrima, numeroDopo) == true){
                     ccCoppie++;
-                }
-                if(divisori(numeroPrima, numeroDopo) == true){
+                } else {
+                    if(divisori(numeroPrima, numeroDopo) == true){
                     ccDivisori++;
                 }
             }
+        } else {
+            i=true; //alterazione variabile esecuzione
         }
-        i=true; //alterazione variabile contatore
 //        cout << ccCoppie << endl << ccDivisori << endl;
         numeroPrima=numeroDopo;
     } while(numeroPrima != 0);
@@ -61,7 +65,7 @@ int variabili(string messaggio){
 }
 
 bool coppieConsecutive(int numero1, int numero2){
-    numero1++;
+//    numero1++;
     if(numero1==numero2){
         return true;
     } else {
@@ -94,9 +98,9 @@ int confronto(int ccDivisori, int ccCoppie){
 void menu(int ccCoppie, int ccDivisori, int conf){
     short int risposta;
     cout << "1. Numero di coppie consecutive" << endl
-     << "2. Numero coppie di cui il secondo è divisore del primo" 
-     << endl << "3. Quale dei due tipi di copia è presente maggiormente" 
-     << endl << "Digitare il numero corrispondente a ciò che si vuole visualizzare: ";
+     << "2. Numero coppie di cui il secondo e  divisore del primo" 
+     << endl << "3. Quale dei due tipi di copia e' presente maggiormente" 
+     << endl << "Digitare il numero corrispondente a cio' che si vuole visualizzare: ";
     cin >> risposta;
     if(risposta==1){
         cout << ccCoppie << endl;
@@ -104,7 +108,15 @@ void menu(int ccCoppie, int ccDivisori, int conf){
         if(risposta==2){
             cout << ccDivisori << endl;
         } else {
-            cout << conf << endl;
+            if(conf==1){
+                cout << "Ci sono piu' coppie di numeri consecutivi uguali" << endl;
+            } else {
+                if(conf == 2){
+                    cout << "Ci sono piu' coppie di divisori" << endl;
+                } else {
+                    cout << "I divisori sono uguali alle coppie consecutive uguali" << endl;
+                }
+            }
         }
     }
     return;
