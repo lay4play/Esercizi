@@ -31,7 +31,7 @@ int main(){
     for(int i=0;i < MAXN;i++){
         cout << numeri[i] << " ";
     }
-    cout << endl; //fix % on VSC
+    // cout << endl; //fix % on VSC
     return 0;
     system("PAUSE");
 }
