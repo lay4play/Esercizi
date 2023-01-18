@@ -1,0 +1,9 @@
+/*
+Sia data una sequenza di numeri interi positivi diversi da zero. I valori sono letti in input da tastiera e
+hanno come tappo l'inserimento dello zero. Presenta un menu per l'esecuzione delle seguenti op-
+zioni:
+- calcolo del numero di coppie di numeri consecutivi uguali;
+- calcolo del numero di coppie in cui il secondo numero è divisore del primo (non uguali);
+- visualizzazione di un messaggio che dica quale tipo di coppie tra le due tipologie indicate è presente
+in numero maggiore. 
+*/

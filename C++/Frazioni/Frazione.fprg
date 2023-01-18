@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="pollonando"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-22 05:55:42 "/>
+        <attribute name="created" value="cG9sbG9uYW5kbztMQVBUT1AtQTNIMTdOVUw7MjAyMi0xMC0yMjsiMDU6MzU6NTkgIjszMzEx"/>
+        <attribute name="edited" value="cG9sbG9uYW5kbztMQVBUT1AtQTNIMTdOVUw7MjAyMi0xMC0yMjsiMDU6Mzg6MTggIjszO1F1YXJhdG87SU5GTzEtRE9DMDE7MjAyMi0xMC0yMTsiMTA6MDU6MjYgIjtGcmF6aW9uZS5mcHJnOzc0NjE="/>
+        <attribute name="edited" value="cG9sbG9uYW5kbztMQVBUT1AtQTNIMTdOVUw7MjAyMi0xMC0yMjsiMDU6NTU6NDIgIjs2OzM0MTg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="numeratore, denominatore, mcd" type="Integer" array="False" size=""/>
+            <assign variable="numeratore" expression="input(&quot;Inserire il numeratore: &quot;, 0)"/>
+            <assign variable="denominatore" expression="input(&quot;Inserire il denominatore: &quot;, 0)"/>
+            <assign variable="mcd" expression="Mcd(numeratore,denominatore)"/>
+            <assign variable="numeratore" expression="numeratore/mcd"/>
+            <assign variable="denominatore" expression="denominatore/mcd"/>
+            <if expression="Controllo(denominatore)==true">
+                <then>
+                    <output expression="&quot;La frazione semplificata &#232; &quot; &amp; numeratore" newline="False"/>
+                </then>
+                <else>
+                    <output expression="&quot;La frazione semplificata &#232; &quot; &amp; numeratore &amp; &quot; / &quot; &amp; denominatore" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="Controllo" type="Boolean" variable="turret">
+        <parameters>
+            <parameter name="denominatore" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="turret" type="Boolean" array="False" size=""/>
+            <if expression="denominatore==1">
+                <then>
+                    <assign variable="turret" expression="true"/>
+                </then>
+                <else>
+                    <assign variable="turret" expression="false"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="Input" type="Integer" variable="risp">
+        <parameters>
+            <parameter name="messaggio" type="String" array="False"/>
+            <parameter name="x" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="risp" type="Integer" array="False" size=""/>
+            <do expression="risp==x">
+                <output expression="messaggio" newline="False"/>
+                <input variable="risp"/>
+                <if expression="risp==x">
+                    <then>
+                        <output expression="&quot;Valore inserito non accettabile.&quot;" newline="True"/>
+                        <output expression="&quot;Inserire un valore diverso da &quot; &amp; x" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+            </do>
+        </body>
+    </function>
+    <function name="Mcd" type="Integer" variable="a">
+        <parameters>
+            <parameter name="a" type="Integer" array="False"/>
+            <parameter name="b" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="restovero" type="Integer" array="False" size=""/>
+            <assign variable="restovero" expression="1"/>
+            <if expression="a &lt; b">
+                <then>
+                    <declare name="c" type="Integer" array="False" size=""/>
+                    <assign variable="c" expression="a"/>
+                    <assign variable="a" expression="b"/>
+                    <assign variable="b" expression="c"/>
+                </then>
+                <else/>
+            </if>
+            <while expression="restovero!=0">
+                <assign variable="restovero" expression="a % b"/>
+                <assign variable="a" expression="b"/>
+                <assign variable="b" expression="restovero"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
