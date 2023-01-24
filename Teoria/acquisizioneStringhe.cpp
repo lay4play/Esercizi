@@ -10,11 +10,13 @@ void minuscolo(char []);
 int main(){
     char messaggio[MAXN];
     string messaggio1;
+    string aux1;
     int num;
     cout << "Inserire il numero di alunni" << endl;
     cin >> num;
+    getline(cin, aux1);
     cout << "Inserire nome" << endl;
-    //getline(cin, messaggio1);             //acquisizione stringhe C++
+    getline(cin, messaggio1);             //acquisizione stringhe C++
     //cin.getline(messaggio, MAXN, '\n');    //acquisizione stringhe C utilizzabile solo in C++
     //gets(messaggio);                      //acquisizione stringhe C
     //minuscolo(messaggio1);
