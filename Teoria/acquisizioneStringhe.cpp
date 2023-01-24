@@ -14,7 +14,8 @@ int main(){
     int num;
     cout << "Inserire il numero di alunni" << endl;
     cin >> num;
-    getline(cin, aux1);
+//    getline(cin, aux1);
+    fflush(stdin);
     cout << "Inserire nome" << endl;
     getline(cin, messaggio1);             //acquisizione stringhe C++
     //cin.getline(messaggio, MAXN, '\n');    //acquisizione stringhe C utilizzabile solo in C++
