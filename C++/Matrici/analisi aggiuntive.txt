@@ -1,0 +1,2 @@
+Analisi aggiuntive:
+Si presuppone che il numero massimo di righe e colonne sia 255 e che i numeri in input siano maggiori o uguali a 10 e minore o uguali a 99.

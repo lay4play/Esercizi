@@ -10,7 +10,7 @@ int main(){
     cout << "Inserisci il numero di alunni: ";
     cin >> alunni;
     fflush(stdin);
-    for(int i=0;i<5;i++){
+    for(int i=0;i<alunni;i++){
         cout << "Inserire il nome del " << i+1 << "o alunno: ";
         cin.getline(nomi[i],20,'\n');
     }
