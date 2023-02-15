@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cstring>
 #include <cstdlib>
-#define MAXA 5
+#define MAXA 16
 #define MIN_TIME 1
 #define MAX_TIME 1000
 
@@ -88,10 +88,9 @@ void input(s_atleta atleti[], int n, int start, int min, int max){
         gets(atleti[i].nome);
         cout << "Inserisci il cognome dell'atleta: ";
         gets(atleti[i].cognome);
-        // fflush(stdin);
+        fflush(stdin);
         atleti[i].tempo=inval("Inserisci il tempo dell'atleta in secondi: ",min,max);
-        // fflush(stdin);
-        getchar();
+        // getchar();       //!!
     }
     return;
 }
