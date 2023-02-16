@@ -22,6 +22,8 @@ struct s_atleta{
     float tempo;
 };
 
+void invalS(char[], string);
+
 float inval(string, int, int);
 
 void sort(s_atleta[], int);
@@ -85,13 +87,11 @@ void sort(s_atleta atleti[],int numero){
 
 void input(s_atleta atleti[], int n, int start, int min, int max){
     for(char i=start;i<n;i++){
-        cout << "Inserisci il nome dell'atleta: ";
-        gets(atleti[i].nome);
-        cout << "Inserisci il cognome dell'atleta: ";
-        gets(atleti[i].cognome);
-        fflush(stdin);
+        invalS(atleti[i].nome,"Inserisci il nome dell'atleta: ");
+        invalS(atleti[i].cognome, "Inserisci il cognome dell'atleta: ");
+        // fflush(stdin);
         atleti[i].tempo=inval("Inserisci il tempo dell'atleta in secondi: ",min,max);
-        // getchar();       //!!
+        getchar();       //!!
         }
     return;
 }
@@ -119,5 +119,10 @@ void scambia(s_atleta atleti[],int i, int i1){
     strcpy(atleti[i+1].nome,tmp.nome);                  // Sposta il record atleti tmp nella variabile corrente
     strcpy(atleti[i+1].cognome,tmp.cognome);            //
 
+    return;
+}
+void invalS(char output[], string messaggio){
+    cout << messaggio;
+    gets(output);
     return;
 }
