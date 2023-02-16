@@ -12,6 +12,7 @@ using namespace std;
 Analisi aggiuntive:
 -Si presuppone che l'intervallo di tempo sia compreso tra 1 secondo e 1000 secondi;
 -Si presuppone che sia necessario fornire in input i dati anagrafici degli atleti ed il loro tempo;
+-Si presuppone che il tempo venga misurato in secondi
 -Si presuppone che nella classifica vengano visualizzati solo i MAXA-1 migliori atleti;
 */
 
@@ -25,7 +26,7 @@ float inval(string, int, int);
 
 void sort(s_atleta[], int);
 
-void scambiaS(s_atleta[], int, int);
+void scambia(s_atleta[], int, int);
 
 void input(s_atleta[], int, int, int, int);
 
@@ -73,7 +74,7 @@ void sort(s_atleta atleti[],int numero){
         stato=false;
 		for(int j=0;j<numero-i-1;j++){
 			if(atleti[j].tempo>atleti[j+1].tempo){
-                scambiaS(atleti,j,j+1);
+                scambia(atleti,j,j+1);
                 stato=true;
 			}
 		}	
@@ -91,7 +92,7 @@ void input(s_atleta atleti[], int n, int start, int min, int max){
         fflush(stdin);
         atleti[i].tempo=inval("Inserisci il tempo dell'atleta in secondi: ",min,max);
         // getchar();       //!!
-    }
+        }
     return;
 }
 
@@ -102,7 +103,7 @@ void visualizza(s_atleta atleti[], int numero){
     return;
 }
 
-void scambiaS(s_atleta atleti[],int i, int i1){
+void scambia(s_atleta atleti[],int i, int i1){
     s_atleta tmp;
 
 
