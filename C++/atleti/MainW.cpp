@@ -121,6 +121,7 @@ void scambia(s_atleta atleti[],int i, int i1){
 
     return;
 }
+
 void invalS(char output[], string messaggio){
     cout << messaggio;
     gets(output);
