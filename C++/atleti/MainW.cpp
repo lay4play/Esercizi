@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cstring>
 #include <cstdlib>
-#define MAXA 16
+#define MAXA 3
 #define MIN_TIME 1
 #define MAX_TIME 1000
 
