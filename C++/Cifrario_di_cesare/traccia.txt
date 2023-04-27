@@ -1,0 +1,14 @@
+Scrivere un programma che implementi le funzioni "cifra(...)" e "decifra(...)" per cifrare e decifrare un messaggio mediante il cosiddetto cifrario di Cesare.
+Si ipotizzi che il messaggio in input sia scritto utilizzando solo lettere minuscole:
+a b c d e f g h i j k l m n o p q r s t u v w x y z
+
+La cifratura avviene sostituendo ogni lettera minuscola dell'alfabeto con la lettera che segue di un certo numero K di posizioni nell'alfabeto, con K fornito in input.
+
+Per esempio, se K=5 e il messaggio in input fosse "hello world", la funzione cifra(...) dovrebbe restituire "mjqqt btwqi", in quanto traslando di 3 posizioni nell'alfabeto ogni lettera si ottiene che:
+'h' è sostituita da 'm'
+'e' è sostituita da 'j'
+'l' è sostituita da 'q'
+e così via...
+
+N.B. Quando i k spostamenti da effettuare vanno oltre la lettera 'z' si continua il conteggio ripartendo dalla lettera 'a'.
+Per esempio, con K=5, la lettera 'w' è sostituita da 'b'.
