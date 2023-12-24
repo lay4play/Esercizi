@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Mioinput
+comment1.params=msg
+comment1.target=java.lang.String\ inputString(java.lang.String)
+comment2.params=msg
+comment2.target=int\ inputInt(java.lang.String)
+comment3.params=msg\ min
+comment3.target=int\ inputInt(java.lang.String,\ int)
+comment4.params=msg\ min\ max
+comment4.target=int\ inputInt(java.lang.String,\ int,\ int)
+numComments=5

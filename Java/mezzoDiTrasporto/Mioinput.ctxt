@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=Mioinput
+comment1.params=msg
+comment1.target=int\ leggiNum(java.lang.String)
+comment2.params=msg
+comment2.target=java.lang.String\ leggiString(java.lang.String)
+comment3.params=msg
+comment3.target=float\ leggiFloat(java.lang.String)
+comment4.params=msg\ min\ max
+comment4.target=float\ leggiFloat(java.lang.String,\ float,\ float)
+comment5.params=msg\ x
+comment5.target=int\ leggiNum(java.lang.String,\ int)
+comment6.params=msg\ min\ max
+comment6.target=int\ leggiNum(java.lang.String,\ int,\ int)
+comment7.params=messaggio
+comment7.target=java.lang.String\ leggiStr(java.lang.String)
+numComments=8

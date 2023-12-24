@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Dipendenti
+comment1.params=nome\ cognome\ oreLavorative\ pagaOraria
+comment1.target=Dipendenti(java.lang.String,\ java.lang.String,\ int,\ float)
+comment2.params=
+comment2.target=float\ stipendio()
+comment3.params=
+comment3.target=void\ report()
+numComments=4

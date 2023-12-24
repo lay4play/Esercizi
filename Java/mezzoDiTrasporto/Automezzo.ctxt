@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Automezzo
+comment1.params=modello\ compagnia\ portata\ cilindrata
+comment1.target=Automezzo(java.lang.String,\ java.lang.String,\ float,\ int)
+comment2.params=
+comment2.target=void\ visualizza()
+numComments=3
